@@ -3,3 +3,19 @@
 //  che hanno la posizione compresa tra “a” e “b”
 
 
+let myArray = ['1', '2', '3', '4', '5'];
+function myFunction(myArray, num1, num2) {
+   
+    let myNewArray = [];
+    myNewArray = myArray.slice(num1, num2);
+    
+    
+    
+    return myNewArray;
+}
+
+
+let range = myFunction(myArray, 1, 3);
+
+console.log(range);
+
