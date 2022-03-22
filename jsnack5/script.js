@@ -5,7 +5,8 @@
 
 let myArray = ['1', '2', '3', '4', '5'];
 function myFunction(myArray, num1, num2) {
-   
+    num2 = myArray.length - 1;
+    num1 = num1 + 1;
     let myNewArray = [];
     myNewArray = myArray.slice(num1, num2);
     
@@ -15,7 +16,7 @@ function myFunction(myArray, num1, num2) {
 }
 
 
-let range = myFunction(myArray, 1, 3);
+let range = myFunction(myArray, 1, 5);
 
 console.log(range);
 
