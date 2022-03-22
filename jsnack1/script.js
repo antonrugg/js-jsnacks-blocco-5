@@ -54,12 +54,19 @@ const arrayZucchine = [
     }
 ]
 
-let sum = 0;
-for (let i = 0; i < arrayZucchine.length; i++){
-    const zucchina = arrayZucchine[i];
-    sum += zucchina.peso;
-    console.log(zucchina.peso);
+function sommaPesoZucchine() {
+    let sum = 0;
+    for (let i = 0; i < arrayZucchine.length; i++) {
+        const zucchina = arrayZucchine[i];
+        sum += zucchina.peso;
+        console.log(zucchina.peso);
+
+    }
+
+    console.log(`sum is: ${sum} kg`);
+    return sum;
+
     
 }
 
-console.log(`sum is: ${sum} kg`);
+sommaPesoZucchine();
