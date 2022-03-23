@@ -5,14 +5,16 @@
 const arrayLettere = ['a', 'b', 'c'];
 const arrayNumeri = ['1', '2', '3'];
 const arrayFuso = [];
-// const arrayFuso = [...arrayLettere, ...arrayNumeri];
+
 
 function joinArray() {
     for (let i = 0; i < arrayLettere.length; i++){
         arrayFuso.push(arrayLettere[i]);
         arrayFuso.push(arrayNumeri[i]);
+        //push puo' pushare piu' di un elemento usando la virgola
+        // arrayFuso.push(arrayLettere[i], arrayNumeri[i]);
     }
-        
+    return arrayFuso;     
 }
 
 
