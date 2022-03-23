@@ -72,39 +72,35 @@ function separatoreZucchine() {
 
     console.table(zucchineCorte);
     console.table(zucchineLunghe);
+
+    return { zucchineCorte, zucchineLunghe };
 }
 
 
-function sommaPesoZucchine(zucchineCorte) {
-    let sum = 0;
+function sommaPesoZucchine(zucchineCorte, zucchineLunghe) {
+    let sumCorte = 0;
     for (let i = 0; i < zucchineCorte.length; i++) {
         const zucchina = zucchineCorte[i];
-        sum += zucchina.peso;
+        sumCorte += zucchina.peso;
         console.log(zucchina.peso);
 
     }
 
-    console.log(`somma del peso delle zucchine corte è: ${sum} kg`);
-    return sum;
-
-
-}
-
-function sommaPesoZucchine(zucchineLunghe) {
-    let sum = 0;
+    let sumLunghe = 0;
     for (let i = 0; i < zucchineLunghe.length; i++) {
         const zucchina = zucchineLunghe[i];
-        sum += zucchina.peso;
+        sumLunghe += zucchina.peso;
         console.log(zucchina.peso);
 
     }
-
-    console.log(`somma del peso delle zucchine lunghe è: ${sum} kg`);
-    return sum;
+    console.log(`somma del peso delle zucchine lunghe è: ${sumLunghe} kg`);
+    console.log(`somma del peso delle zucchine corte è: ${sumCorte} kg`);
+    return { sumCorte, sumLunghe };
 
 
 }
 
+
+
 separatoreZucchine();
-sommaPesoZucchine(zucchineCorte);
-sommaPesoZucchine(zucchineLunghe);
+sommaPesoZucchine(zucchineCorte, zucchineLunghe);
